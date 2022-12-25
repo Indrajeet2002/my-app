@@ -4,7 +4,6 @@ import Footer from "./Footer"
 function App() {
   return (
     <div className="App">
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
       <header className="App-header">
         <p>
           Edit <code>src/App.js</code> and save to reload. Hello World
