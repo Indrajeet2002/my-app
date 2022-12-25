@@ -2,6 +2,7 @@ import "./App.css";
 import Footer from "./Footer"
 import Navbar from "./Navbar";
 import Signup from "./Signup";
+import About from "./About";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -18,6 +19,7 @@ function Page() {
     <div className="App">
       <Navbar/>
       <Signup/>
+      <About/>
       <header className="App-header">
         <p>
           Edit <code>src/App.js</code> and save to reload. Hello World
