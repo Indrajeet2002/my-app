@@ -1,6 +1,7 @@
 import "./App.css";
 import Footer from "./Footer"
 import Navbar from "./Navbar";
+import Signup from "./Signup";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -16,6 +17,7 @@ function Page() {
   return (
     <div className="App">
       <Navbar/>
+      <Signup/>
       <header className="App-header">
         <p>
           Edit <code>src/App.js</code> and save to reload. Hello World
