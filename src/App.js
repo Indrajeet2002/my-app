@@ -1,8 +1,18 @@
 import "./App.css";
 import Footer from "./Footer"
 import Navbar from "./Navbar";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Page/>}/>
+      <Route path="/s" element={<h1>Router Working</h1>}/>
+    </Routes>
+  );
+}
+
+function Page() {
   return (
     <div className="App">
       <Navbar/>
