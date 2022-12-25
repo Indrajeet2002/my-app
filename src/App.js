@@ -1,9 +1,11 @@
 import "./App.css";
 import Footer from "./Footer"
+import Navbar from "./Navbar";
 
 function App() {
   return (
     <div className="App">
+      <Navbar/>
       <header className="App-header">
         <p>
           Edit <code>src/App.js</code> and save to reload. Hello World
