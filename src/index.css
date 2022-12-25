@@ -8,6 +8,6 @@
 
 @layer components {
     .navbar-button {
-        @apply text-3xl mr-5 text-white hover:text-black hover:bg-white rounded-lg hover:rounded-lg transition-all duration-300 ease-linear cursor-pointer; 
+        @apply text-3xl text-white hover:text-black hover:bg-white rounded-lg hover:rounded-lg transition-all duration-300 ease-linear cursor-pointer; 
     }
 }
