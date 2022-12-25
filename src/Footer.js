@@ -12,15 +12,24 @@ const people = [{name: "Firas Alshami", link: "https://github.com/falshami2002"}
 
 const Footer = () => {
     return (
-        <div className='bottom-0 w-screen h-[20vh] bg-gray-500 text-white text-lg max-w-full flex flex-col items-center'>
+        <div className='bottom-0 w-screen h-[20vh] bg-gray-600 text-white text-lg max-w-full flex flex-col'>
             <div className='max-w-full w-screen h-[15vh] flex justify-around items-center'>
-                <FooterParagraph header={header1} paragraph={paragraph1}/>
+                <div className='text-center flex flex-col items-start h-full justify-start w-full'>
+                    <h1 className='font-bold mt-5 ml-5 text-4xl'>App Name + Logo</h1>
+                    <p className='ml-5 mt-2 text-base font-serif'>Some statement about the app and what it does and stuff.</p>
+                </div>
                 <FooterParagraph header={header1} paragraph={paragraph1}/>
                 <FooterParagraph header={header1} paragraph={paragraph1}/>
             </div>
             <hr className='w-screen max-w-full'></hr>
-            <div className='h-[7vh] w-screen max-w-full flex items-center justify-around'>
-                <GitDisplay/>
+            <div className='w-screen max-w-full flex'>
+                <div className='w-1/2 h-[7vh] flex flex-col items-start ml-5 text-base justify-center'>
+                    <h1 className='font-serif'>Copyright Statement</h1>
+                    <p className='font-thin'>This is something about copryight and this is the copyright statement here.</p>
+                </div>
+                <div className='h-[7vh] w-1/2 flex items-center justify-around'>
+                    <GitDisplay/>
+                </div>
             </div>
         </div>
     );
@@ -28,9 +37,9 @@ const Footer = () => {
 
 const FooterParagraph = (props) => {
     return (
-        <div className='text-center flex flex-col items-center h-full justify-start w-full just'>
-            <h1 className='w-1/2 mb-2 text-lg h-min whitespace-nowrap top-0 mt-3'>{props.header}</h1>
-            <p className='w-1/2 text-sm'>{props.paragraph}</p>
+        <div className='text-center flex flex-col items-center h-full justify-start w-full'>
+            <h1 className='w-1/2 mb-2 text-lg h-min whitespace-nowrap top-0 mt-3 font-bold'>{props.header}</h1>
+            <p className='w-1/2 text-sm font-serif'>{props.paragraph}</p>
         </div>
     );
 }
