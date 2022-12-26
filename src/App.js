@@ -25,7 +25,8 @@ function Page() {
   return (
     <div className="App">
       <Navbar/>
-      {/* <Signup/> */}
+       <Signup/> 
+       <Login/>
       {/* {
         currentForm === "login" ? <Login onFormSwitch={toggleForm}/> : <Signup onFormSwitch={toggleForm}/>
       } */}
