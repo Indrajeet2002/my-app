@@ -6,6 +6,7 @@
     padding: 100px 50px 50px 50px;
     background: white;
     color: rgba(0, 0, 0, 0.8);
+    font:  sans-serif;
   }
 .box-content{
 height: 32;
@@ -16,6 +17,9 @@ margin-bottom: 20px;
 }
 .info{
   display: inline;
+}
+.text{
+  
 }
 
   

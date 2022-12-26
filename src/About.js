@@ -10,8 +10,13 @@ function About() {
           </br>
 
           <h1>
-            Welecome to App Name
-          </h1>
+            <strong>Welecome to App Name</strong>
+          </h1> <br></br>
+
+          <h2>
+            This App will find any movie you desire
+            ,think of it as spotify but for movies!!
+          </h2>
           
           <div className="text">
         
@@ -26,10 +31,11 @@ function About() {
 
         
         <div className="box-content h-32 w-32 p-4 border-4 ...">
-                <h1> <strong>Joel A</strong></h1>
+                <h1> <strong>Joel </strong></h1>
                 <p>
                   working on home page
                 </p>
+               
             
                 
         </div>
@@ -66,7 +72,7 @@ function About() {
 
       </div>
       <h1>
-        fff
+        
       </h1>
 
       </div>
