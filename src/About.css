@@ -1,13 +1,84 @@
 .about {
+  display: flex;
+  justify-content: space-between;
     min-height: 100vh;
     width: 100vw;
     padding: 100px 50px 50px 50px;
     background: white;
     color: rgba(0, 0, 0, 0.8);
   }
+.box-content{
+height: 32;
+width: 32;
+padding: 4;
+border-radius: 4;
+margin-bottom: 20px;
+}
+.info{
+  display: inline;
+}
 
   
 
 
 
   
+ /*     
+      <div className="about  ">
+        <div className="box-content h-32 w-32 p-4 border-4">
+          <h1><strong>Danyal N</strong></h1>
+          
+          <p>
+            working on about us page
+          </p>  
+        </div>
+
+        
+        <div className="box-content h-32 w-32 p-4 border-4 ...">
+                <h1> <strong>Joel A</strong></h1>
+                <p>
+                  working on home page
+                </p>
+            
+                
+        </div>
+       
+        <div className="box-content h-32 w-32 p-4 border-4 ...">
+                <h1> <strong>Andy G</strong></h1>
+                <p>
+                  sign up page
+                </p>
+            
+                
+        </div>
+        
+        <div className="box-content h-32 w-32 p-4 border-4 ...">
+                <h1> <strong>Firas A</strong></h1>
+                <p>
+                  working on footer
+                </p>
+            
+                
+        </div>
+        
+        <div className="box-content h-32 w-32 p-4 border-4 ...">
+                <h1> <strong>Indrajeet P</strong></h1>
+                <p>
+                  log in page
+                </p>
+            
+                
+        </div>
+      <div className='info'>
+        <h1>
+          rfff
+        </h1>
+      </div >
+
+      </div>
+      <div className="container">
+            <div className="row">
+              <div className="col-12"></div>
+          </div>
+          </div>
+    */
