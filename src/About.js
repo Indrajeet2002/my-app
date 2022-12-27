@@ -1,87 +1,87 @@
 import React from'react';
+import './index.css';
 import "./About.css";
+import {GoMarkGithub} from "react-icons/go";
 
 function About() {
     return (
-      <div className="about flex flex-row items-center">
-        <div class="box-content h-32 w-32 p-4 border-4 ...">
+        <React.Fragment>
+          <br>
+          </br>
+
+          <h1>
+            <strong>Welecome to App Name</strong>
+          </h1> <br></br>
+
+          <h2>
+            This App will find any movie you desire
+            ,think of it as spotify but for movies!!
+          </h2>
+          
+          <div className="text">
+        
+          <div className="about">
+        <div className="box-content h-32 w-32 p-4 border-4">
           <h1><strong>Danyal N</strong></h1>
+          
           <p>
-            Blah Blah
+            working on about us page
           </p>  
         </div>
-        <div class="group flex items-center">
-          <img class="shrink-0 h-12 w-12 rounded-full" src="..." alt="" />
-          <div class="ltr:ml-3 rtl:mr-3">
-            <p class="text-sm font-medium text-slate-300 group-hover:text-white">...</p>
-            <p class="text-sm font-medium text-slate-500 group-hover:text-slate-300">...</p>
-          </div>
-        </div>
-        <div class="box-content h-32 w-32 p-4 border-4 ...">
-                <h1> <strong>Joel A</strong></h1>
+
+        
+        <div className="box-content h-32 w-32 p-4 border-4 ...">
+                <h1> <strong>Joel </strong></h1>
                 <p>
-                  Blah Blah
+                  working on home page
                 </p>
+               
             
                 
         </div>
-        <div class="group flex items-center">
-          <img class="shrink-0 h-12 w-12 rounded-full" src="..." alt="" />
-          <div class="ltr:ml-3 rtl:mr-3">
-            <p class="text-sm font-medium text-slate-300 group-hover:text-white">...</p>
-            <p class="text-sm font-medium text-slate-500 group-hover:text-slate-300">.ccc..</p>
-          </div>
-        </div>
-        <div class="box-content h-32 w-32 p-4 border-4 ...">
+       
+        <div className="box-content h-32 w-32 p-4 border-4 ...">
                 <h1> <strong>Andy G</strong></h1>
                 <p>
-                  Blah Blah
+                  sign up page
                 </p>
             
                 
         </div>
-        <div class="group flex items-center">
-          <img class="shrink-0 h-12 w-12 rounded-full" src="..." alt="" />
-          <div class="ltr:ml-3 rtl:mr-3">
-            <p class="text-sm font-medium text-slate-300 group-hover:text-white">...</p>
-            <p class="text-sm font-medium text-slate-500 group-hover:text-slate-300">.ccc..</p>
-          </div>
-        </div>
-        <div class="box-content h-32 w-32 p-4 border-4 ...">
+        
+        <div className="box-content h-32 w-32 p-4 border-4 ...">
                 <h1> <strong>Firas A</strong></h1>
                 <p>
-                  Blah Blah
+                  working on footer
                 </p>
             
                 
         </div>
-        <div class="group flex items-center">
-          <img class="shrink-0 h-12 w-12 rounded-full" src="..." alt="" />
-          <div class="ltr:ml-3 rtl:mr-3">
-            <p class="text-sm font-medium text-slate-300 group-hover:text-white">...</p>
-            <p class="text-sm font-medium text-slate-500 group-hover:text-slate-300">.ccc..</p>
-          </div>
-        </div>
-        <div class="box-content h-32 w-32 p-4 border-4 ...">
+        
+        <div className="box-content h-32 w-32 p-4 border-4 ...">
                 <h1> <strong>Indrajeet P</strong></h1>
                 <p>
-                  Blah Blah
+                  log in page
                 </p>
             
                 
         </div>
-        <div class="group flex items-center">
-          <img class="shrink-0 h-12 w-12 rounded-full" src="..." alt="" />
-          <div class="ltr:ml-3 rtl:mr-3">
-            <p class="text-sm font-medium text-slate-300 group-hover:text-white">...</p>
-            <p class="text-sm font-medium text-slate-500 group-hover:text-slate-300">.ccc..</p>
-          </div>
-        </div>
+      <div className='info'>
+        
+      </div >
 
       </div>
-      
+      <h1>
+        
+      </h1>
+
+      </div>
+
+        </React.Fragment>
+
+    
+    
     );
   }
   
   export default About;
-  /*     */
