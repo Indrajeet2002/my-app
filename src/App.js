@@ -16,7 +16,9 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Page/>}/>
-      <Route path="/s" element={<h1>Router Working</h1>}/>
+      <Route path="/Login" element={<Login/>}/>
+      <Route path="/About" element={<About/>}/>
+      <Route path="/Register" element={<Signup/>}/>
     </Routes>
   );
 }
@@ -25,12 +27,9 @@ function Page() {
   return (
     <div className="App">
       <Navbar/>
-       <Signup/> 
-       <Login/>
       {/* {
         currentForm === "login" ? <Login onFormSwitch={toggleForm}/> : <Signup onFormSwitch={toggleForm}/>
       } */}
-      <About/>
       <header className="App-header">
         <p>
           Edit <code>src/App.js</code> and save to reload. Hello World

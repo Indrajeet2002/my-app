@@ -2,9 +2,13 @@ import React from'react';
 import './index.css';
 import "./About.css";
 import {GoMarkGithub} from "react-icons/go";
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 function About() {
     return (
+      <>
+        <Navbar/>
         <React.Fragment>
           <br>
           </br>
@@ -77,7 +81,9 @@ function About() {
 
       </div>
 
-        </React.Fragment>
+      </React.Fragment>
+      <Footer/>  
+      </>
 
     
     
