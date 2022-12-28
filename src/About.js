@@ -27,6 +27,9 @@ function About() {
           <div className="text">
         
           <div className="about">
+            <Cards>
+              
+            </Cards>
         <div className="box-content h-32 w-32 p-4 border-4">
           <h1><strong>Danyal N</strong></h1>
           
