@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 const Navbar = () => {
 
   return (
-    <header aria-label="Site Header" class="bg-white dark:bg-gray-900">
+    <header aria-label="Site Header" class="bg-gray-900">
       <div class="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
         <a class="block text-teal-600 dark:text-teal-300" href="/">
           <span class="sr-only">Home</span>

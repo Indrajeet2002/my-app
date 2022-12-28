@@ -4,8 +4,7 @@ import "./About.css";
 import Navbar from './Navbar';
 
 function About() {
-  return (
-    
+
     <section class="bg-gray-800">
     <Navbar/>
   <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
