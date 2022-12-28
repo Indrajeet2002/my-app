@@ -20,7 +20,7 @@ const Signup = (props) => {
         <div className="auth-form-container bg-sky-500 items-center">
             <form onSubmit={handleSubmit}> 
                 <label htmlFor="name">Full Name</label> <br></br>
-                <input value={name} name="name" id="name" placeholder="full name"></input> <br></br>
+                <input value={name} onChange={(e) => setName(e.target.value)} name="name" id="name" placeholder="full name"></input> <br></br>
                 <label htmlfor="email">Email</label> <br></br>
                 <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="sampleemail@gmail.com" id="email" name="email"></input> <br></br>
                 <label htmlfor="password">Password</label> <br></br>
