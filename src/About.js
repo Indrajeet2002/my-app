@@ -27,17 +27,13 @@ function About() {
           <div className="text">
         
           <div className="about">
-<<<<<<< HEAD
-        <div className="box-content h-90 w-50 p-5 border-5">
+        <div className="box-content h-32 w-32 p-4 border-4">
           <h1><strong>Danyal N</strong></h1>
           
           <p>
             working on about us page
           </p>  
         </div>
-=======
-        <Cards/>
->>>>>>> d55a387adc03f750c368c27003f23fb94d56d885
 
         
         <div className="box-content h-40 w-40 p-4 border-4 ...">
