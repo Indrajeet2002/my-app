@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
+        //card animation changes
         'cardIn': 'cardIn 4s linear',
         'cardOut': 'cardOut 2s linear'
       },
