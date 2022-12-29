@@ -150,33 +150,7 @@ const Signup = (props) => {
                 </div>
 
                 <div class="col-span-6">
-                    {/* <label for="MarketingAccept" class="flex gap-4">
-                    <input
-                        type="checkbox"
-                        id="MarketingAccept"
-                        name="marketing_accept"
-                        class="h-5 w-5 rounded-md border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800"
-                    />
-
-                    <span class="text-sm text-gray-700 dark:text-gray-200">
-                        I want to receive emails about events, product updates and
-                        company announcements.
-                    </span>
-                    </label> */}
                 </div>
-
-                {/* <div class="col-span-6">
-                    <p class="text-sm text-gray-500 dark:text-gray-400">
-                    By creating an account, you agree to our
-                    <a href="#" class="text-gray-700 underline dark:text-gray-200">
-                        terms and conditions
-                    </a>
-                    and
-                    <a href="#" class="text-gray-700 underline dark:text-gray-200">
-                        privacy policy </a
-                    >.
-                    </p>
-                </div> */}
 
                 <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
                     <button
