@@ -27,7 +27,7 @@ const Login = (props) => {
                 <Link to="/Register">
                     <button className="border-2 py-2.5 px-2.5 mb-8 bg-white border-radius: 10px rounded hover:bg-slate-300" onClick={() => props.onFormSwitch('signup')}>Don't have an account? Sign up here.</button>
                 </Link>
-            </div>
+        </div>
         </>
         <Footer/>    
         </>
