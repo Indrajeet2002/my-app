@@ -110,11 +110,11 @@ const Login = (props) => {
                     Log In
                     </button>
 
-                    <p class="mt-4 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+                    <p class="mt-4 text-sm text-gray-500 dark:text-gray-400 sm:mt-0 flex">
                     Don't have an account?
-                    <a href="#" class="text-gray-700 underline dark:text-gray-200"
-                        > Sign up</a
-                    >.
+                    <Link to="/Register">
+                        <p className="text-gray-700 underline dark:text-gray-200 ml-1">Sign up</p>
+                    </Link>
                     </p>
                 </div>
                 </form>

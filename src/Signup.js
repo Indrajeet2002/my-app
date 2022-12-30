@@ -159,11 +159,11 @@ const Signup = (props) => {
                     Create an account
                     </button>
 
-                    <p class="mt-4 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+                    <p class="mt-4 text-sm text-gray-500 dark:text-gray-400 sm:mt-0 flex">
                     Already have an account? 
-                    <a href="#" class="text-gray-700 underline dark:text-gray-200"
-                        > Log in</a
-                    >.
+                    <Link to="/Login">
+                        <p className="text-gray-700 underline dark:text-gray-200 ml-1">Log in</p>
+                    </Link>
                     </p>
                 </div>
                 </form>
