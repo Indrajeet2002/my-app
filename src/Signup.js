@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import Pattern from './LoginSignupPattern.png'
 
 const Signup = (props) => {
     const [email, setEmail] = useState('');
@@ -33,7 +34,7 @@ const Signup = (props) => {
             >
             <img
                 alt="Pattern"
-                src="https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                src={Pattern}
                 class="absolute inset-0 h-full w-full object-cover"
             />
             </aside>
