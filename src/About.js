@@ -86,7 +86,7 @@ function About() {
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="https://github.com/Indrajeet2002">Indrajeet Patwardhan</a>
               </h3>
-              <p>Worked on Log-In page</p>
+              
               <ul class="flex justify-center mt-4 space-x-4">
                   <li>
                       <a href="https://www.linkedin.com/in/indrajeet-patwardhan-163b08211/" class="text-[#39569c] hover:text-gray-900 dark:hover:text-white">
@@ -103,11 +103,11 @@ function About() {
               </ul>
           </div>
           <div class="text-center text-gray-500 dark:text-gray-400">
-              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="https://avatars.githubusercontent.com/u/77473114?v=4" alt="Sofia Avatar"/>
+              <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="https://media.licdn.com/dms/image/D5603AQGHhl7tapcbPQ/profile-displayphoto-shrink_400_400/0/1672452844755?e=1677715200&v=beta&t=SuWhm1G0lYHglw_FGRvqnL4ZMe4Y7obIpoSty8nJ9jQ" alt="Sofia Avatar"/>
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="https://github.com/andy-gale">Andy Gale</a>
               </h3>
-              <p>Worked on Sign-Up page</p>
+              
               <ul class="flex justify-center mt-4 space-x-4">
                   <li>
                       <a href="https://www.linkedin.com/in/andrew-gale-225b02259/" class="text-[#39569c] hover:text-gray-900 dark:hover:text-white">
