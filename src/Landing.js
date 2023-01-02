@@ -17,7 +17,7 @@ const Landing = () => {
             </h1>
 
             <p class="mt-4 max-w-lg sm:text-xl sm:leading-relaxed">
-              Create and curate you movie tastes with the help of Movify!
+              Create and curate your movie tastes with the help of Movify!
             </p>
 
             <div class="mt-8 flex flex-wrap gap-4 text-center">

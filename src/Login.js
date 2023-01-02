@@ -62,7 +62,7 @@ const Login = (props) => {
                 <h1
                 class="mt-6 text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl md:text-4xl"
                 >
-                Welcome to Movie Manager 🎥
+                Welcome to Movify 🎥
                 </h1>
 
                 <p class="mt-4 leading-relaxed text-gray-500 dark:text-gray-400">
