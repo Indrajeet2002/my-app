@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 const Navbar = () => {
 
   return (
-    <header aria-label="Site Header" class="bg-gray-900">
+    <header aria-label="Site Header" class="bg-white dark:bg-zinc-900">
       <div class="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
         <a class="block text-teal-600 dark:text-teal-300" href="/">
           <span class="sr-only">Home</span>
@@ -26,7 +26,7 @@ const Navbar = () => {
             <ul class="flex items-center gap-6 text-sm">
               <li>
                 <Link to="/About">
-                  <span class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75">
+                  <span class="text-[#1DB954] transition hover:text-gray-500/75 dark:text-[#1DB954] dark:hover:text-white/75">
                     About
                   </span>
                 </Link>
@@ -37,13 +37,13 @@ const Navbar = () => {
           <div class="flex items-center gap-4">
             <div class="sm:flex sm:gap-4">
               <Link to="/Login">
-                <span class="block rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700 dark:hover:bg-teal-500">
+                <span class="block rounded-md bg-[#1DB954] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-green-700 dark:hover:bg-green-700">
                   Login
                 </span>
               </Link>
 
               <Link to="/Register">
-                <a class="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 transition hover:text-teal-600/75 dark:bg-gray-800 dark:text-white dark:hover:text-white/75 sm:block">
+                <a class="hidden rounded-md bg-white px-5 py-2.5 text-sm font-medium text-[#1DB954] transition hover:text-zinc-900 dark:bg-white dark:text-[#1DB954] dark:hover:text-zinc-900 sm:block">
                   Register
                 </a>
               </Link>
