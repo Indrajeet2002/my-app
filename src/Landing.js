@@ -2,7 +2,6 @@ import "./index.css";
 import {Link} from "react-router-dom";
 
 const Landing = () => {
-
   return (
     <section className="relative bg-[url(./LandingPageImg.png)] bg-cover bg-center bg-no-repeat">
         <div class="absolute inset-0 bg-white/75 sm:bg-transparent sm:bg-gradient-to-r sm:from-lime-700 sm:to-white/25"></div>
