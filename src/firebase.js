@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 import { initializeApp } from "firebase/app";
-import { getAuth, onAuthStateChanged} from "firebase/auth"
-import React, { useContext, useEffect, useState, createContext } from 'react'
-=======
-import firebase from "firebase/compat/app";
-import "firebase/auth";
->>>>>>> cb0f449bae26f9810570c8676e319dda76489920
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged} from "firebase/auth"
+import { useContext, useEffect, useState, createContext } from 'react'
 
 // const app = initializeApp({
 //   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
