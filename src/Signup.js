@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import Pattern from './LoginSignupPattern.png';
 import { useRef } from "react";
+import { signup } from "./firebase";
 
 const Signup = (props) => {
     const [email, setEmail] = useState('');
@@ -16,7 +17,7 @@ const Signup = (props) => {
     const passwordRef = useRef();
     const passwordConfirmRef = useRef();
 
-    /*async function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
 
         if (passwordRef.current.value !== passwordConfirmRef.current.value) {
@@ -32,7 +33,7 @@ const Signup = (props) => {
         }
 
         setLoading(false);
-    }*/
+    }
 
     return (
             <>
@@ -180,6 +181,7 @@ const Signup = (props) => {
                                             <button
                                                 disabled={loading}
                                                 class="inline-block shrink-0 rounded-md border border-blue-600 bg-[#1DB954] px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500 dark:hover:bg-blue-700 dark:hover:text-white"
+                                                onClick={handleSubmit}
                                             >
                                                 Create an account
                                             </button>
