@@ -4,12 +4,11 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import Pattern from './LoginSignupPattern.png';
 import { useRef } from "react";
-import { signup } from "./firebase";
+import { signup, app, auth, db } from "./firebase";
+import { doc, setDoc} from 'firebase/firestore';
+import { createUserWithEmailAndPassword } from "firebase/auth"
 
 const Signup = (props) => {
-    const [email, setEmail] = useState('');
-    const [pass, setPass] = useState('');
-    const [name, setName] = useState('');
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
 
@@ -33,6 +32,13 @@ const Signup = (props) => {
         }
 
         setLoading(false);
+    }
+
+    function signup(email, password){
+        setDoc(doc(db, 'Users', email), {
+            movies: []
+        });
+        return createUserWithEmailAndPassword(auth, email, password);
     }
 
     return (

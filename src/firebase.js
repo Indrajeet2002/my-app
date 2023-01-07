@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged} from "firebase/auth"
+import { getAuth, onAuthStateChanged} from "firebase/auth"
 import { useContext, useEffect, useState, createContext } from 'react'
 import { getFirestore, doc, setDoc, updateDoc, arrayUnion, getDoc } from 'firebase/firestore';
 
@@ -13,9 +13,9 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore();
+export const app = initializeApp(firebaseConfig);
+export const auth = getAuth();
+export const db = getFirestore();
 
 const UserContext = createContext();
 
@@ -38,9 +38,4 @@ export function UserProvider({children}) {
   )
 }
 
-export function signup(email, password){
-  setDoc(doc(db, 'Users', email), {
-      movies: []
-  });
-  return createUserWithEmailAndPassword(auth, email, password);
-}
+
