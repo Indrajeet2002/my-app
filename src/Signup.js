@@ -4,7 +4,6 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import Pattern from './LoginSignupPattern.png';
 import { useRef } from "react";
-import { AuthProvider, useAuth } from "./contexts/AuthContext";
 
 const Signup = (props) => {
     const [email, setEmail] = useState('');
@@ -17,9 +16,7 @@ const Signup = (props) => {
     const passwordRef = useRef();
     const passwordConfirmRef = useRef();
 
-    const { signup } = useAuth();
-
-    async function handleSubmit(e) {
+    /*async function handleSubmit(e) {
         e.preventDefault();
 
         if (passwordRef.current.value !== passwordConfirmRef.current.value) {
@@ -35,10 +32,9 @@ const Signup = (props) => {
         }
 
         setLoading(false);
-    }
+    }*/
 
     return (
-        <AuthProvider>
             <>
                 <Navbar />
                 <>
@@ -219,7 +215,7 @@ const Signup = (props) => {
                 </>
                 <Footer />
             </>
-        </AuthProvider>
+        
     )
 }
 export default Signup;
