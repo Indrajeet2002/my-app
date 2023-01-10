@@ -1,5 +1,6 @@
 import "./index.css";
 import {Link} from "react-router-dom";
+import Test from "./Test";
 
 const Landing = () => {
   return (
