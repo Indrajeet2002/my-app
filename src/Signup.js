@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import Pattern from './LoginSignupPattern.png';
 import { useRef } from "react";
-import { signup, app, auth, db } from "./firebase";
+import { auth, db } from "./firebase";
 import { doc, setDoc} from 'firebase/firestore';
 import { createUserWithEmailAndPassword } from "firebase/auth"
 
