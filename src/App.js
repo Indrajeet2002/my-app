@@ -6,6 +6,7 @@ import Signup from "./Signup";
 import Login from "./Login";
 import About from "./About";
 import Landing from "./Landing";
+import Search from "./Search";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -28,6 +29,7 @@ function Page() {
   return (
     <div className="App">
       <Navbar />
+      <Search/>
       <Landing />
       <Footer />
     </div>
