@@ -3,14 +3,35 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import { Link } from "react-router-dom";
 import Pattern from './LoginSignupPattern.png'
+import { useRef } from "react";
+
+import { auth } from "./firebase";
+import { signInWithEmailAndPassword } from "firebase/auth"
 
 const Login = (props) => {
-    const [email, setEmail] = useState('');
-    const [pass, setPass] = useState('');
 
-    const handleSubmit = (e) => {
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
+    
+    const emailRef = useRef();
+    const passwordRef = useRef();
+
+    async function handleSubmit(e) {
         e.preventDefault();
-        console.log(email);
+
+        console.log(emailRef.current.value);
+        console.log(passwordRef.current.value);
+
+        try {
+            setError('');
+            setLoading(true);
+            await signInWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value);
+        } catch {
+            setError('Failed to sign into account');
+        }
+
+        setLoading(false);
+
     }
 
     return (
@@ -81,6 +102,7 @@ const Login = (props) => {
                     </label>
 
                     <input
+                    ref={emailRef}
                     type="email"
                     id="Email"
                     name="email"
@@ -97,6 +119,7 @@ const Login = (props) => {
                     </label>
 
                     <input
+                    ref={passwordRef}
                     type="password"
                     id="Password"
                     name="password"
@@ -107,6 +130,7 @@ const Login = (props) => {
                 <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
                     <button
                     class="inline-block shrink-0 rounded-md border border-blue-600 bg-[#1DB954] px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500 dark:hover:bg-blue-700 dark:hover:text-white"
+                    onClick={handleSubmit}
                     >
                     Log In
                     </button>
@@ -144,8 +168,3 @@ const Login = (props) => {
     )
 }
 export default Login
-// const Login = () => {
-//     // return (
-        
-//     // );
-// }
