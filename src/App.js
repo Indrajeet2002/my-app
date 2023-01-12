@@ -27,7 +27,6 @@ function Page() {
   return (
     <div className="App">
       <Navbar />
-      <Playlists/>
       <Landing />
       <Footer />
     </div>
