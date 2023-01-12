@@ -11,10 +11,6 @@ import { Route, Routes } from "react-router-dom";
 import Playlists from "./Playlists";
 
 function App() {
-  // const [currentForm, setCurrentForm] = useState('login');
-  // const toggleForm = (formName) => {
-  //   setCurrentForm(formName);
-  // }
 
   return (
     <Routes>
@@ -22,6 +18,7 @@ function App() {
       <Route path="/Login" element={<Login />} />
       <Route path="/About" element={<About />} />
       <Route path="/Register" element={<Signup />} />
+      <Route path="/Search" element={<Search />} />
     </Routes>
   );
 }
@@ -30,7 +27,6 @@ function Page() {
   return (
     <div className="App">
       <Navbar />
-      <Search/>
       <Playlists/>
       <Landing />
       <Footer />
