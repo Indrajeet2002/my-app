@@ -60,7 +60,7 @@ const Search = () => {
           </ul>
         </div>
         <div className="w-1/2 h-full flex flex-col flex-grow card rounded-none bg-base-300 place-items-center">
-          <h1 className="text-black text-[3vh]">Current Playlist</h1>
+          <h1 contenteditable="true" className="text-black text-[3vh]">Current Playlist</h1>
           <ul id="currentPlaylist" className="flex flex-col items-center">
             {movieList.map(function (movie) {
               var ul = document.getElementById("currentPlaylist");
