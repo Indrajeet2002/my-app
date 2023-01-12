@@ -8,6 +8,7 @@ import About from "./About";
 import Landing from "./Landing";
 import Search from "./Search";
 import { Route, Routes } from "react-router-dom";
+import Playlists from "./Playlists";
 
 function App() {
   // const [currentForm, setCurrentForm] = useState('login');
@@ -30,6 +31,7 @@ function Page() {
     <div className="App">
       <Navbar />
       <Search/>
+      <Playlists/>
       <Landing />
       <Footer />
     </div>
