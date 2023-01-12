@@ -15,9 +15,9 @@ function Popup(props) {
   const imgUrl = "https://image.tmdb.org/t/p/original" + props.info.poster_path;
 
   return (
-    <div id="container" onClick={handleOnClose} className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center">     
+    <div id="container" onClick={handleOnClose} className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center z-10 rounded-3xl">     
       
-      <div class="max-w-sm rounded overflow-hidden shadow-lg object-contain">
+      <div class="max-w-sm rounded overflow-hidden shadow-lg object-contain bg-gray-300">
         <img class="w-full" src={imgUrl}  alt="Movie Poster"/>
         <div class="px-6 py-4">
           <div class="font-bold text-xl mb-2">{props.info.original_title}</div>

@@ -14,11 +14,11 @@ function ListSearch(props) {
   }
 
   return (
-    <div>
-      <li className="py-3">
-        <button className="btn" onClick={() => setShowModal(true)}>{props.info.original_title}</button>
-        <button className="btn bg-[#1DB954] text-white" onClick={handleClick} disabled={disableButton}>+</button>
-      </li>
+    <div classname= 'w-full flex justify-center'>
+      <div className="py-3  flex w-full">
+        <button className="btn w-[95%]" onClick={() => setShowModal(true)}>{props.info.original_title}</button>
+        <button className="btn bg-[#1DB954] text-white w-[5%]" onClick={handleClick} disabled={disableButton}>+</button>
+      </div>
       <Popup trigger={showModal} onClose={() => setShowModal(false)} info={props.info}/>
     </div>
   );
