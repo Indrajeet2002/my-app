@@ -1,7 +1,8 @@
 import "./index.css";
 import { search } from "./APIFunctions";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import ListSearch from "./ListSearch";
+import PlaylistItem from "./PlaylistItem";
 import ReactDOM from 'react-dom/client';
 import { useState } from "react";
 
@@ -13,12 +14,37 @@ const Search = () => {
   var count = 0;
 
   function updateList(newMovie) {
-    updateMovieList([...movieList, {
-      id: count++,
-      value: newMovie
-    }]);
+    // updateMovieList([{
+    //   id: count++,
+    //   value: newMovie
+    // }, ... movieList]);
+
+    updateMovieList((arr) => {
+        return [{
+          id: count++,
+          value: newMovie
+        }, ...arr];
+    });
+    
   }
 
+  useEffect(() => {
+    console.log(movieList);
+  }, [movieList]);
+
+  function removeMovie(movieToRemove){
+      var index = 0;
+      movieList.forEach((movie) => {
+        if(movie.value===movieToRemove){
+          return ;
+        } else{
+          index++;
+        }
+      });
+      var temp = movieList;
+      temp.splice(index, 1);
+      updateMovieList(temp);
+  }
 
   async function handleClick() {
     console.log(searchQuery.current.value);
@@ -62,12 +88,23 @@ const Search = () => {
         <div className="w-1/2 h-full flex flex-col flex-grow card rounded-none bg-base-300 place-items-center">
           <h1 contenteditable="true" className="text-black text-[3vh]">Current Playlist</h1>
           <ul id="currentPlaylist" className="flex flex-col items-center">
-            {movieList.map(function (movie) {
-              var ul = document.getElementById("currentPlaylist");
+            {
+              
+              movieList.map(function (movie) {
+              {/* var ul = document.getElementById("currentPlaylist");
               var li = document.createElement("li");
               li.innerHTML = movie.value;
+              ul.appendChild(li); */}
+              console.log(movie)
+              var ul = document.getElementById("currentPlaylist");
+              var li = document.createElement("li");
+              li.classList.add('w-4/5'); 
+              li.setAttribute("id", "playlistItem-" + movie.id);
               ul.appendChild(li);
-              {/* return <li>{movie.value}</li>; */ }
+              var insertionPoint = document.getElementById("playlistItem-" + movie.id);
+              var listSearchComp = <PlaylistItem key={movie} info={movie.value} removeMovie={removeMovie} />;
+              const root = ReactDOM.createRoot(insertionPoint);
+              root.render(listSearchComp);
             })}
           </ul>
         </div>
