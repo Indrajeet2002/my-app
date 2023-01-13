@@ -13,6 +13,14 @@ const Search = () => {
 
   var count = 0;
 
+  // editable playlist name
+  const [playlistName, setPlaylistName] = useState("Playlist");
+   
+  const onChange = (event) => setPlaylistName(event.target.value);
+  
+  
+
+
   function updateList(newMovie) {
     // updateMovieList([{
     //   id: count++,
@@ -86,7 +94,14 @@ const Search = () => {
           </ul>
         </div>
         <div className="w-1/2 h-full flex flex-col flex-grow card rounded-none bg-base-300 place-items-center">
-          <h1 contenteditable="true" className="text-black text-[3vh]">Current Playlist</h1>
+          {/* <h1 contenteditable="true" className="text-black text-[3vh]">Current Playlist</h1> */}
+          <input
+            type="text"
+            aria-label="Field name"
+            value={playlistName}
+            onChange={onChange}
+          />
+
           <ul id="currentPlaylist" className="flex flex-col items-center">
             {
               
