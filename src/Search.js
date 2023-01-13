@@ -14,11 +14,6 @@ const Search = () => {
   var count = 0;
 
   function updateList(newMovie) {
-    // updateMovieList([{
-    //   id: count++,
-    //   value: newMovie
-    // }, ... movieList]);
-
     updateMovieList((arr) => {
         return [{
           id: count++,
@@ -33,21 +28,18 @@ const Search = () => {
   }, [movieList]);
 
   function removeMovie(movieToRemove){
-      var index = 0;
-      movieList.forEach((movie) => {
-        if(movie.value===movieToRemove){
-          return ;
-        } else{
-          index++;
-        }
+      updateMovieList(prevMovie => {
+        return prevMovie.filter((movie, movieId) => {
+          return movie.value !== movieToRemove;
+        });
       });
-      var temp = movieList;
-      temp.splice(index, 1);
-      updateMovieList(temp);
+
+      var buttonName = "add-button-" + movieToRemove;
+
+      // document.getElementById(buttonName).disabled = false;
   }
 
   async function handleClick() {
-    console.log(searchQuery.current.value);
     let arr = await search(searchQuery.current.value)
     let val = 0;
 
@@ -70,8 +62,6 @@ const Search = () => {
       const root = ReactDOM.createRoot(insertionPoint);
       root.render(listSearchComp);
     })
-
-    console.log(arr);
   }
 
   return (
@@ -91,20 +81,9 @@ const Search = () => {
             {
               
               movieList.map(function (movie) {
-              {/* var ul = document.getElementById("currentPlaylist");
-              var li = document.createElement("li");
-              li.innerHTML = movie.value;
-              ul.appendChild(li); */}
-              console.log(movie)
-              var ul = document.getElementById("currentPlaylist");
-              var li = document.createElement("li");
-              li.classList.add('w-4/5'); 
-              li.setAttribute("id", "playlistItem-" + movie.id);
-              ul.appendChild(li);
-              var insertionPoint = document.getElementById("playlistItem-" + movie.id);
-              var listSearchComp = <PlaylistItem key={movie} info={movie.value} removeMovie={removeMovie} />;
-              const root = ReactDOM.createRoot(insertionPoint);
-              root.render(listSearchComp);
+              if(document.getElementById("playlistItem-" + movie.value)==null){
+                return (<PlaylistItem key={movie.id} info={movie.value} removeMovie={removeMovie} />);
+              }              
             })}
           </ul>
         </div>
