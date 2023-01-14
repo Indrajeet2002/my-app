@@ -27,7 +27,7 @@ const Playlists = () => {
 const Playlist = (props) => {
     return (
         <div className='w-full h-full flex justify-center items-center'>
-            <Link to='/Search' state='Playlist Name'>
+            <Link to='/Search' state={{playlistName: 'Playlist Name'}}>
                 <div className='ml-[5%] w-[90%] h-[70%] bg-slate-200 rounded-xl hover:bg-slate-300 hover:rounded-3xl transition-all duration-300 flex items-center justify-center'>
                     <div className='w-1/5 p-[2%]'>
                         <img className='rounded-full' src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/800px-Google_Chrome_icon_%28February_2022%29.svg.png" />
