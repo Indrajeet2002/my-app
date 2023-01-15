@@ -20,7 +20,7 @@ const Playlists = () => {
                     <h1 className='text-white text-[5vh]'>Your Playlists</h1>
                 </div>
                 <div className='w-screen max-w-full h-[5vh] flex justify-end'>
-                    <button className='bg-white' onClick={() => createPlaylist()}>ADD</button>
+                    <button className='btn btn-xs sm:btn-sm md:btn-md lg:btn-lg' onClick={() => createPlaylist()}>ADD</button>
                 </div>
                 <div className='h-[85vh] grid grid-cols-3 items-center justify-items-center grid-rows-5'>
                     {
