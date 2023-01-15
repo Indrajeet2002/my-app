@@ -4,9 +4,7 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import Pattern from './LoginSignupPattern.png';
 import { useRef } from "react";
-import { auth, db } from "./firebase";
-import { doc, setDoc} from 'firebase/firestore';
-import { createUserWithEmailAndPassword } from "firebase/auth"
+import { signup } from "./firebase";
 
 const Signup = (props) => {
     const [error, setError] = useState('');
@@ -20,6 +18,7 @@ const Signup = (props) => {
         e.preventDefault();
 
         if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+            console.log("pass error")
             return setError('Passwords do not match');
         }
 
@@ -28,18 +27,14 @@ const Signup = (props) => {
             setLoading(true);
             await signup(emailRef.current.value, passwordRef.current.value);
         } catch {
+            console.log("error")
             setError('Failed to create an account');
         }
 
         setLoading(false);
     }
 
-    function signup(email, password){
-        setDoc(doc(db, 'Users', email), {
-            movies: []
-        });
-        return createUserWithEmailAndPassword(auth, email, password);
-    }
+    
 
     return (
             <>

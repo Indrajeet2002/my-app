@@ -9,15 +9,18 @@ import Landing from "./Landing";
 import Search from "./Search";
 import { Route, Routes } from "react-router-dom";
 import Playlists from "./Playlists";
+import NoLoginRoutes from "./NoLoginRoutes";
 
 function App() {
 
   return (
     <Routes>
+      <Route element={<NoLoginRoutes/>}>
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Register" element={<Signup />} />
+      </Route>
       <Route path="/" element={<Page />} />
-      <Route path="/Login" element={<Login />} />
       <Route path="/About" element={<About />} />
-      <Route path="/Register" element={<Signup />} />
       <Route path="/Search" element={<Search />} />
       <Route path="/Playlists" element={<Playlists/>} />
     </Routes>

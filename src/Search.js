@@ -5,16 +5,20 @@ import ListSearch from "./ListSearch";
 import PlaylistItem from "./PlaylistItem";
 import ReactDOM from 'react-dom/client';
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const Search = () => {
 
+  const location = useLocation()
+  const { playlist } = location.state
+
   const searchQuery = useRef();
-  const [movieList, updateMovieList] = useState([]);
+  const [movieList, updateMovieList] = useState(playlist.movies);
 
   var count = 0;
 
   // editable playlist name
-  const [playlistName, setPlaylistName] = useState("Playlist");
+  const [playlistName, setPlaylistName] = useState(playlist.name);
    
   const onChange = (event) => setPlaylistName(event.target.value);
   
