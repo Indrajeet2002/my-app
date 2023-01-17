@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, onAuthStateChanged} from "firebase/auth"
+import { getAuth, onAuthStateChanged, signOut} from "firebase/auth"
 import { useContext, useEffect, useState, createContext } from 'react'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { getFirestore, doc, setDoc, updateDoc, arrayUnion, getDoc, collection, getDocs } from 'firebase/firestore';
@@ -85,4 +85,7 @@ export async function getPlaylists() {
   
 }
 
+export function logout() {
+  return signOut(auth)
+}
 
