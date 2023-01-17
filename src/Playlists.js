@@ -1,17 +1,20 @@
 import Navbar from './Navbar.js'
 import Footer from './Footer'
 import { Link } from 'react-router-dom'
-import { createPlaylist, getPlaylists } from './firebase.js'
+import { createPlaylist, getPlaylists, logout } from './firebase.js'
 import { useEffect, useState } from 'react'
 
 const Playlists = () => {
     const [playlists, setPlaylists] = useState([])
+
+    async function get() {
+        setPlaylists(await getPlaylists())
+    }
+
     useEffect(() => {
-        async function get() {
-            setPlaylists(await getPlaylists())
-        }
         get()
     })
+
     return (
         <>
             <Navbar />

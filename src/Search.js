@@ -25,11 +25,11 @@ const Search = () => {
   
 
 
-  function updateList(newMovie) {
+  function updateList(newMovieName, newMovieId) {
     updateMovieList((arr) => {
         return [{
-          id: count++,
-          value: newMovie
+          id: newMovieId,
+          value: newMovieName
         }, ...arr];
     });
     
@@ -64,6 +64,7 @@ const Search = () => {
     }
 
     arr.map(function (movie) {
+      console.log(movie);
       val = val + 1;
       var li = document.createElement("li");
       li.classList.add('w-4/5'); 

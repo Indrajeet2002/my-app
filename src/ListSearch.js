@@ -12,7 +12,7 @@ function ListSearch(props) {
   
   function handleClick(){
     setDisableButton(true);
-    props.addMovie(props.info.original_title);
+    props.addMovie(props.info.original_title, props.info.id);
   }
 
   return (
