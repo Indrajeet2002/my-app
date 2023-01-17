@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, onAuthStateChanged, signOut} from "firebase/auth"
 import { useContext, useEffect, useState, createContext } from 'react'
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, getAuth, onAuthStateChanged } from "firebase/auth";
 import { getFirestore, doc, setDoc, updateDoc, arrayUnion, getDoc, collection, getDocs } from 'firebase/firestore';
 
 // const firebaseConfig = {
@@ -84,8 +83,3 @@ export async function getPlaylists() {
   return docSnap.data().playlists
   
 }
-
-export function logout() {
-  return signOut(auth)
-}
-
