@@ -1,8 +1,8 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged, signOut} from "firebase/auth"
 import { useContext, useEffect, useState, createContext } from 'react'
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { getFirestore, doc, setDoc, updateDoc, arrayUnion, getDoc, collection } from 'firebase/firestore';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { getFirestore, doc, setDoc, updateDoc, arrayUnion, getDoc, collection, getDocs } from 'firebase/firestore';
 
 // const firebaseConfig = {
 //   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -51,28 +51,38 @@ export function UserProvider({children}) {
 
 export function signup(email, password){
   setDoc(doc(db, 'Users', email), {
-      playlists: {}
+      playlists: []
   });
   return createUserWithEmailAndPassword(auth, email, password);
+}
+
+export function login(email, password) {
+  return signInWithEmailAndPassword(auth, email, password);
+}
+
+export function logout() {
+  return signOut(auth);
 }
 
 export async function createPlaylist() {
   const docRef = doc(db, 'Users', auth.currentUser.email);
   const docSnap = await getDoc(docRef);
   const len = docSnap.data().playlists.length
-    updateDoc(docRef, {
-        playlists: arrayUnion({
-          name: "New Playlist "+len,
-          movies: []
-        })
-    })
-
+  
+  updateDoc(docRef, {
+      playlists: arrayUnion({
+        name: "New Playlist "+len,
+        movies: []
+      })
+  })
 }
 
 export async function getPlaylists() {
-  const docRef = doc(db, 'Users', auth.currentUser?.email)
+
+  const docRef = doc(db, 'Users', auth.currentUser.email)
   const docSnap = await getDoc(docRef)
   return docSnap.data().playlists
+  
 }
 
 export function logout() {

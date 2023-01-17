@@ -4,9 +4,7 @@ import Footer from './Footer';
 import { Link } from "react-router-dom";
 import Pattern from './LoginSignupPattern.png'
 import { useRef } from "react";
-
-import { auth } from "./firebase";
-import { signInWithEmailAndPassword } from "firebase/auth"
+import { login } from "./firebase";
 
 const Login = (props) => {
 
@@ -25,11 +23,12 @@ const Login = (props) => {
         try {
             setError('');
             setLoading(true);
-            await signInWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value);
+            await login(emailRef.current.value, passwordRef.current.value);
         } catch {
             setError('Failed to sign into account');
+            console.log(error);
         }
-
+        console.log("success");
         setLoading(false);
 
     }
