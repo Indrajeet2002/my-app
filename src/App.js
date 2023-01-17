@@ -10,19 +10,22 @@ import Search from "./Search";
 import { Route, Routes } from "react-router-dom";
 import Playlists from "./Playlists";
 import NoLoginRoutes from "./NoLoginRoutes";
+import LoginRoutes from "./LoginRoutes";
 
 function App() {
 
   return (
     <Routes>
-      <Route element={<NoLoginRoutes/>}>
+      <Route element={<NoLoginRoutes />}>
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Signup />} />
       </Route>
       <Route path="/" element={<Page />} />
       <Route path="/About" element={<About />} />
-      <Route path="/Search" element={<Search />} />
-      <Route path="/Playlists" element={<Playlists/>} />
+      <Route element={<LoginRoutes />}>
+        <Route path="/Search" element={<Search />} />
+        <Route path="/Playlists" element={<Playlists />} />
+      </Route>
     </Routes>
   );
 }
