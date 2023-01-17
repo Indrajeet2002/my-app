@@ -6,6 +6,7 @@ import PlaylistItem from "./PlaylistItem";
 import ReactDOM from 'react-dom/client';
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
+import { getPlaylists, updatePlaylists } from "./firebase";
 
 const Search = () => {
 
@@ -22,7 +23,7 @@ const Search = () => {
    
   const onChange = (event) => setPlaylistName(event.target.value);
   
-  
+  let playlists = []
 
 
   function updateList(newMovieName, newMovieId) {
@@ -34,6 +35,13 @@ const Search = () => {
     });
     
   }
+
+  useEffect(() => {
+    async function getPlay() {
+      playlists = await getPlaylists()
+    }
+    getPlay()
+  })
 
   useEffect(() => {
     console.log(movieList);

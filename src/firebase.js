@@ -83,3 +83,10 @@ export async function getPlaylists() {
   return docSnap.data().playlists
   
 }
+
+export async function updatePlaylists(playlists) {
+  const docRef = doc(db, 'Users', auth.currentUser.email);
+  updateDoc(docRef, {
+    playlists: playlists
+  })
+}
