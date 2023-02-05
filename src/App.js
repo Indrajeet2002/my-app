@@ -19,9 +19,9 @@ function App() {
       <Route element={<NoLoginRoutes />}>
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Signup />} />
+        <Route path="/" element={<Page />} />
+        <Route path="/About" element={<About />} />
       </Route>
-      <Route path="/" element={<Page />} />
-      <Route path="/About" element={<About />} />
       <Route element={<LoginRoutes />}>
         <Route path="/Search" element={<Search />} />
         <Route path="/Playlists" element={<Playlists />} />

@@ -3,6 +3,7 @@ import Footer from './Footer'
 import { Link } from 'react-router-dom'
 import { createPlaylist, getPlaylists, logout } from './firebase.js'
 import { useEffect, useState } from 'react'
+import { AiFillEdit } from 'react-icons/ai'
 
 const Playlists = () => {
     const [playlists, setPlaylists] = useState([])
@@ -15,6 +16,8 @@ const Playlists = () => {
         get()
     })
 
+
+
     return (
         <>
             <Navbar />
@@ -25,7 +28,7 @@ const Playlists = () => {
                 <div className='w-screen max-w-full h-[5vh] flex justify-end'>
                     <button className='btn btn-xs sm:btn-sm md:btn-md lg:btn-lg' onClick={() => createPlaylist()}>ADD</button>
                 </div>
-                <div className='h-[85vh] grid grid-cols-3 items-center justify-items-center grid-rows-5'>
+                <div className='h-[85vh] grid grid-cols-3 items-center justify-items-center grid-rows-5 w-screen max-w-full'>
                     {
                         playlists.map((play) =>
                         <Playlist play = {play} />
@@ -41,16 +44,19 @@ const Playlists = () => {
 const Playlist = (props) => {
     return (
         <div className='w-full h-full flex justify-center items-center'>
-            <Link to='/Search' state={{playlist: props.play}}>
                 <div className='ml-[5%] w-[90%] h-[70%] bg-slate-200 rounded-xl hover:bg-slate-300 hover:rounded-3xl transition-all duration-300 flex items-center justify-center'>
+                    <Link className='w-full h-full' to='/Search' state={{playlist: props.play}}>
+                        <div className='w-4/5 h-[80%] flex flex-col items-center justify-center'>
+                            <h1 className='text-black font-bold text-[3vh]'>{props.play.name}</h1>
+                        </div>
+                    </Link>
                     <div className='w-1/5 p-[2%]'>
-                        <img className='rounded-full' src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/800px-Google_Chrome_icon_%28February_2022%29.svg.png" alt='Icon'/>
-                    </div>
-                    <div className='w-4/5 h-[80%] flex flex-col items-center'>
-                        <h1 className='text-black font-bold text-[3vh]'>{props.play.name}</h1>
+                        <button>
+                            <AiFillEdit className='text-[5vh]'/>
+                        </button>
                     </div>
                 </div>
-            </Link>
+            
         </div>
 
     )
