@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom/client';
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { getPlaylists, updatePlaylists } from "./firebase";
+import { async } from "@firebase/util";
 
 const Search = () => {
 
@@ -59,6 +60,18 @@ const Search = () => {
       // document.getElementById(buttonName).disabled = false;
   }
 
+  async function updatePlay() {
+
+      playlists.forEach(element => {
+          if(element.name===playlist.name){
+            element.movies = movieList
+          }
+      });
+
+      updatePlaylists(playlists)
+    
+  }
+
   async function handleClick() {
     let arr = await search(searchQuery.current.value)
     let val = 0;
@@ -104,6 +117,9 @@ const Search = () => {
             value={playlistName}
             onChange={onChange}
           />
+
+          <button type="button" onClick={updatePlay} class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Save</button>
+
 
           <ul id="currentPlaylist" className="flex flex-col items-center">
             {

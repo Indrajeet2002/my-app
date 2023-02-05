@@ -77,11 +77,9 @@ export async function createPlaylist() {
 }
 
 export async function getPlaylists() {
-
   const docRef = doc(db, 'Users', auth.currentUser.email)
   const docSnap = await getDoc(docRef)
   return docSnap.data().playlists
-  
 }
 
 export async function updatePlaylists(playlists) {
